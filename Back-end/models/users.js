@@ -40,16 +40,14 @@ const getUserById = async (id) => {
 };
 
 const createUser = async (newUser) => { 
-  // The newUser parameter is an array of objects, I need to extract only the 1st one to perform the operation
-  const userData = newUser[0];   
   try {
     // Check if all fields are present in the request body
-    if (!userData.first_name || !userData.last_name || !userData.email) {
+    if (!newUser.first_name || !newUser.last_name || !newUser.email) {
       return { message: 'Missing required fields (first_name, last_name, email)' };
-    }
+    }    
     const result = await client.query(
       'INSERT INTO users (first_name, last_name, email) VALUES ($1, $2, $3)',
-      [userData.first_name, userData.last_name, userData.email]
+      [newUser.first_name, newUser.last_name, newUser.email]
     );    
     return { message: 'User created successfully' };
   } catch (err) {
@@ -58,9 +56,15 @@ const createUser = async (newUser) => {
 };
 
 
-const updateUser = async (id, changes) => {
-  const newData = changes[0];
+
+const updateUser = async (id, data) => {
+  const newData = data
+  console.log(newData)
   try {
+    // Check if all required fields are present in the request body
+    if (!newData.first_name || !newData.last_name || !newData.email) {
+      return { message: 'Missing required fields (first_name, last_name, email)' };
+    }
     const result = await client.query(
       'UPDATE users SET first_name = $1, last_name = $2, email = $3 WHERE id = $4',
       [newData.first_name, newData.last_name, newData.email, id]
