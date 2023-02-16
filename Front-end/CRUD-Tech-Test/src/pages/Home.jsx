@@ -5,7 +5,7 @@ import './Home.css'
 import { deleteUser } from '../services/userService';
 
 export const getUsers = async () => {
-  const result = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
+  const result = await axios.get(`https://crud-app-bakcend.onrender.com/api/users`);
   return result.data.payload;
 };
 

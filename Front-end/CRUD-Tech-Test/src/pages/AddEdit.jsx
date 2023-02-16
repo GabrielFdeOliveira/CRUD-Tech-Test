@@ -27,7 +27,7 @@ function AddEdit() {
   const addUser = async (newUser) => {
     try {
       const result = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/users`,
+        `https://crud-app-bakcend.onrender.com/api/users`,
         newUser,
         {
           //To ensure the data is sent as JSON to the backend
@@ -50,7 +50,7 @@ function AddEdit() {
   const updateUser = async (data, id) => {
     try {
       const result = await axios.put(
-        `${process.env.REACT_APP_BACKEND_URL}/api/users/${id}`,
+        `https://crud-app-bakcend.onrender.com/api/users/${id}`,
         data,
         {
           headers: {
