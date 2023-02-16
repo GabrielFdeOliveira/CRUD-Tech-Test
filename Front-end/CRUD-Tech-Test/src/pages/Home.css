@@ -1,3 +1,6 @@
+body {
+  background-color:#A5BEE1;
+}
 .app{
     width: 100vw;
     position: relative;
@@ -16,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #A5E1C8;
     padding: 30px;
     border-radius: 10px;
     width: 50%;

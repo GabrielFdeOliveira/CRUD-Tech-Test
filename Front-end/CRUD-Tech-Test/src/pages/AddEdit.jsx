@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import "./AddEdit.css";
-import bgImage from '../video/backgoundVideo.mp4'
 import { getSingleUser } from '../services/api';
 
 
@@ -96,9 +95,6 @@ function AddEdit() {
 
   return (
     <div className="add-form-container">
-      <video autoPlay loop muted playsInline>
-          <source src={bgImage} type="video/mp4" />
-      </video> 
         <form className="add-form" onSubmit={handleSubmit}>
           <label htmlFor="name">First Name</label>
           <input

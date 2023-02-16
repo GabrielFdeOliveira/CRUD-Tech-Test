@@ -13,7 +13,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less)$': '<rootDir>/__tests__/__mocks__/styleMock.js',
-    "\\.(mp4)$": "<rootDir>/__tests__/__mocks__/videoMock.js"
+    "\\.(mov)$": "<rootDir>/__tests__/__mocks__/videoMock.js"
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 };

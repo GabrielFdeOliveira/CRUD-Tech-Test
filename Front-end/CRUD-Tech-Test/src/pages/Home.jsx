@@ -1,9 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify'
 import './Home.css'
-import bgImage from '../video/backgoundVideo.mp4'
 import { deleteUser } from '../services/userService';
 
 export const getUsers = async () => {
@@ -23,9 +21,6 @@ function Home() {
   return (
     <div>
         <div className="app-container" data-testid="home" >
-        <video autoPlay loop muted playsInline>
-          <source src={bgImage} type="video/mp4" />
-        </video> 
           <h1 className="app-title">Users List</h1>
           <table className="app-table">
             <thead>
