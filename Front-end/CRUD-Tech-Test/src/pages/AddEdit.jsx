@@ -27,7 +27,7 @@ function AddEdit() {
   const addUser = async (newUser) => {
     try {
       const result = await axios.post(
-        "http://localhost:3000/api/users",
+        `${process.env.REACT_APP_BACKEND_URL}/api/users`,
         newUser,
         {
           //To ensure the data is sent as JSON to the backend
@@ -50,7 +50,7 @@ function AddEdit() {
   const updateUser = async (data, id) => {
     try {
       const result = await axios.put(
-        `http://localhost:3000/api/users/${id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/users/${id}`,
         data,
         {
           headers: {
