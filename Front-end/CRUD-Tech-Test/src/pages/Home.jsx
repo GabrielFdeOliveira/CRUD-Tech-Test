@@ -12,6 +12,16 @@ export const getUsers = async () => {
 function Home() {
   const [users, setUsers] = useState([]);
 
+  const handleDeleteUser = (id) => {
+    deleteUser(id).then((result) => {
+      if (result.status === 200) {
+        getUsers().then((data) => {
+          setUsers(data);
+        });
+      }
+    });
+  };
+
   useEffect(() => {
     getUsers().then((data) => {
       setUsers(data);
@@ -46,7 +56,7 @@ function Home() {
                   </td>
                   <td>
                     <button
-                      onClick={() => deleteUser(user.id)}
+                      onClick={() => handleDeleteUser(user.id)}
                     >
                       Delete
                     </button>
