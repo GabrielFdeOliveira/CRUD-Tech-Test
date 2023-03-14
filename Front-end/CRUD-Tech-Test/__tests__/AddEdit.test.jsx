@@ -9,7 +9,7 @@ describe('AddEdit component', () => {
     const firstNameInput = screen.getByLabelText('First Name');
     const lastNameInput = screen.getByLabelText('Last Name');
     const emailInput = screen.getByLabelText('Email');
-    const submitButton = screen.getByRole('button', { name: /add/i });
+    const submitButton = screen.getByRole('button', { name: 'Add' });
 
     expect(firstNameInput).toBeInTheDocument();
     expect(lastNameInput).toBeInTheDocument();
