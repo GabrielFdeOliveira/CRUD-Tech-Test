@@ -54,13 +54,11 @@ function Home() {
           <table className="app-table">
             <thead>
               <tr>
-                <th style={{ textAlign: "center" }}>ID</th>
-                <th style={{ textAlign: "center" }}>First Name</th>
-                <th style={{ textAlign: "center" }}>Last Name</th>
-                <th style={{ textAlign: "center" }}>Email</th>
-                <th colSpan="2" style={{ textAlign: "center" }}>
-                  Actions
-                </th>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th colSpan="2">Actions</th>
               </tr>
             </thead>
             <tbody>

@@ -1,53 +1,12 @@
 body {
   background-color: #a5bee1;
 }
-.app {
-  width: 100vw;
-  position: relative;
-  z-index: 1;
-}
-.app-container video {
-  position: absolute;
-  z-index: -1;
-  top: -190px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-.app-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #a5e1c8;
-  padding: 30px;
-  border-radius: 10px;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
 
 .app-title {
   font-size: 2em;
   color: #555;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.app-table {
-  margin: 0 auto;
-  width: 100%;
-  border-collapse: collapse;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  justify-content: center;
-}
-
-.app-table th {
-  background-color: #4a4a4a;
-  color: #fff;
-  font-weight: 600;
-  text-align: left;
-  padding: 10px;
 }
 
 h2 {
@@ -68,6 +27,10 @@ h2 {
   background-color: #f5f5f5;
 }
 
+.app-table th {
+  text-align: center;
+}
+
 .app-table tr:hover {
   background-color: #f0f0f0;
 }
@@ -79,8 +42,7 @@ h2 {
   background-color: #dcdcdc;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .app-container {
-    width: 80%;
   }
 }

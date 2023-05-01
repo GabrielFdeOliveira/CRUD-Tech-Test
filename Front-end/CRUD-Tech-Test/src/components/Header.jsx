@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
 import "./Header.css";
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState("Home");
+  const [menu, setMenu] = useState(false);
 
   const location = useLocation();
   useEffect(() => {
@@ -13,13 +15,15 @@ const Header = () => {
       setActiveTab("AddUser");
     } else if (location.pathname === "/about") {
       setActiveTab("About");
+    } else if (location.pathname === "/assignment") {
+      setActiveTab("Assignment");
     }
   }, [location]);
-  
+
   return (
-    <div className="header"  data-testid="header">
+    <div className="header" data-testid="header">
       <Link to="/">
-      <p className="logo">User Management System</p>
+        <h1 className="logo">User Management System</h1>
       </Link>
       <div className="header-right">
         <Link to="/">
@@ -36,6 +40,14 @@ const Header = () => {
             onClick={() => setActiveTab("AddUser")}
           >
             Add User
+          </p>
+        </Link>
+        <Link to="/assignment">
+          <p
+            className={`${activeTab === "Assignment" ? "active" : ""}`}
+            onClick={() => setActiveTab("Assignment")}
+          >
+            Assignment
           </p>
         </Link>
         <Link to="/about">

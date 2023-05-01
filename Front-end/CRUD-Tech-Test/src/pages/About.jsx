@@ -1,10 +1,11 @@
 import React from "react";
-import './About.css'
+import "./About.css";
 
 function About() {
   return (
     <div data-testid="about" className="about">
       <article>
+        <h1>Development Journey</h1>
         <p>
           This is a full-stack CRUD application developed using a range of
           technologies, including Node.js, Express, PG, CORS, Postgres, Vite
@@ -45,8 +46,8 @@ function About() {
           have achieved through this project. With more time, I would consider
           adding additional functionalities, improving the GitHub workflow, and
           ensuring the app is responsive. Overall, this project has been one of
-          my most rewarding experiences to date, and I am already looking
-          forward to returning to enhance it further.
+          my most rewarding experiences to date, and I am carrying a good deal
+          of knowledge with me.
         </p>
       </article>
     </div>
